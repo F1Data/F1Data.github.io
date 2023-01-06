@@ -5,7 +5,7 @@ class MainTemplate extends HTMLElement {
 
         super();
 
-        this.content = null;
+        this.content = '';
     }
     //--------------------------------------------------------------------------
     connectedCallback() {
@@ -23,12 +23,12 @@ class MainTemplate extends HTMLElement {
     //--------------------------------------------------------------------------
     render() {
 
-        let content = this.innerHTML;
+        this.content = this.innerHTML;
 
         this.innerHTML = '';
 
         this.appendChild(this.#createNav(this));
-        this.appendChild(this.#createContent(content));
+        this.appendChild(this.#createContent(this.content));
         this.appendChild(this.#createFooter());
 
     }

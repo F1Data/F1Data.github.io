@@ -10,13 +10,18 @@
 body {
   height: 100vh;
   min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
   background-color: #f6f6f6;
 }
 
 main-template {
   height: 100%;
+  width: 100%;
   display: grid;
   grid-template-rows: 60px 1fr 40px;
+  grid-template-columns: 100%;
+  overflow-x: hidden;
   transition: 200ms;
 }
 main-template.menu-open {
@@ -69,6 +74,11 @@ nav .nav-link::hover {
   color: #fff;
 }
 
+main {
+  max-width: 100%;
+  overflow: hidden;
+}
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -82,6 +92,19 @@ footer span, footer a {
 }
 footer a:hover {
   color: #fff;
+}
+
+/*----------------------------------------------------------------------------*/
+.section-title {
+  display: box;
+  width: 100%;
+  background-color: #000;
+  text-align: center;
+}
+.section-title span {
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 2rem;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -103,6 +126,27 @@ footer a:hover {
   }
 }
 /*----------------------------------------------------------------------------*/
+season-selector {
+  display: block;
+  height: 100%;
+  overflow: auto;
+}
+
+.season-selector-box {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.season-selector-link {
+  display: inline-block;
+  font-size: 1.4rem;
+  padding: 8px 16px 8px 16px;
+  margin: 10px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+}
+
 /*----------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------*/
 * {

@@ -5,11 +5,14 @@
   background-size: 48px 48px;
 }
 /*----------------------------------------------------------------------------*/
-body { height: 100vh; min-height: 100vh; background-color: #f6f6f6; }
+body { height: 100vh; min-height: 100vh; width: 100%; max-width: 100%; background-color: #f6f6f6; }
 
 main-template {
-  height: 100%;
-  display: grid; grid-template-rows: 60px 1fr 40px; 
+  height: 100%; width: 100%;
+  display: grid; 
+  grid-template-rows: 60px 1fr 40px; 
+  grid-template-columns: 100%;
+  overflow-x: hidden;
   transition: 200ms;
   &.menu-open {
     grid-template-rows: 260px 1fr 40px; 
@@ -60,7 +63,8 @@ nav {
 }
 
 main {
-
+  max-width: 100%;
+  overflow: hidden;
 }
 
 footer {
@@ -72,6 +76,22 @@ footer {
     font-size: 0.7rem;
   }
   a:hover { color: #fff;}
+}
+
+/*----------------------------------------------------------------------------*/
+
+.section-title {
+  display: box;
+  width: 100%;
+  background-color: #000;
+  text-align: center;
+  
+  span { 
+    color: #fff; 
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
 }
 
 /*----------------------------------------------------------------------------*/

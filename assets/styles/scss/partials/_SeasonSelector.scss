@@ -1,0 +1,20 @@
+season-selector {
+    display: block;
+    height: 100%;
+    overflow: auto;
+}
+
+.season-selector-box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.season-selector-link {
+    display: inline-block;
+    font-size: 1.4rem;
+    padding: 8px 16px 8px 16px;
+    margin: 10px;
+    border: 1px solid #808080;
+    border-radius: 4px;
+}
