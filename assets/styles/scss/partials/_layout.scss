@@ -1,0 +1,91 @@
+/*----------------------------------------------------------------------------*/
+.loading-image {
+  min-height: 100%;
+  background: url('../../img/loading.gif') no-repeat center center;
+  background-size: 48px 48px;
+}
+/*----------------------------------------------------------------------------*/
+body { height: 100vh; min-height: 100vh; background-color: #f6f6f6; }
+
+main-template {
+  height: 100%;
+  display: grid; grid-template-rows: 60px 1fr 40px; 
+  transition: 200ms;
+  &.menu-open {
+    grid-template-rows: 260px 1fr 40px; 
+  }
+}
+
+nav {
+  background: #606060 url('../../img/logoSpantaran_tw_220x60_.png') no-repeat left top;
+  text-align: right;
+  overflow: hidden;
+
+  .menu-button {
+    font-size: 1.8rem; line-height: 60px;
+    color: #f6f6f6;
+    margin-right: 10px;
+    &:hover {
+      color: #ffa500;
+    }
+  }
+  
+  .menu-open-button {
+    &::before { content: "☰"; }
+    &.menu-open { display: none; }
+  }
+  
+  .menu-close-button {
+    display: none;
+    &::before { content: "✕"; }
+    &.menu-open { display: block; }
+  }
+
+  .nav-links-box {
+    text-align: right;
+    border-top: 1px solid #f6f6f6;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    font-size: 1.6rem; line-height: 60px;
+    color: #f6f6f6;
+    display: block;
+    padding-right: 20px;
+    &::hover {
+      color: #fff;
+    }
+  }
+}
+
+main {
+
+}
+
+footer {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0px 10px 0px 10px;
+  background-color: #606060;
+  span, a {
+    color: #f6f6f6;
+    font-size: 0.7rem;
+  }
+  a:hover { color: #fff;}
+}
+
+/*----------------------------------------------------------------------------*/
+
+@media only screen and (min-width: 770px) {
+
+  main-template.menu-open { grid-template-rows: 60px 1fr 40px; }
+
+  .menu-button { display: none !important; }
+
+  .nav-links-box { border: none; }
+
+  .nav-link { display: inline !important; }  
+  
+}
+
+/*----------------------------------------------------------------------------*/

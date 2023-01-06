@@ -1,0 +1,33 @@
+/*----------------------------------------------------------------------------*/
+@use './partials/layout';
+/*----------------------------------------------------------------------------*/
+
+* { box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px; color: #606060; }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { 
+    font-family: "Microsoft Sans Serif", sans-serif, Helvetica, Tahoma, Verdana, Arial, "Helvetica Neue", "Lucida Grande", "Segoe UI";
+    font-size: 20px; font-style: normal; font-variant: normal; font-weight: normal;
+    line-height: 1.2rem;
+    -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal; line-height: 1.2em; }
+
+h1 {font-size: 1.8rem; }
+h2 {font-size: 1.6rem; }
+h3 {font-size: 1.4rem; }
+h4 {font-size: 1.3rem; }
+h5 {font-size: 1.2rem; }
+h6 {font-size: 1.1rem; }
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h small6 { font-size: 80%; }
+
+img { border: none; }
+
+a { text-decoration: none; cursor: pointer; }
+
+input, button, label  { font-size: 1rem; }
+
+/*----------------------------------------------------------------------------*/
