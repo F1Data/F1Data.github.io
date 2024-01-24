@@ -1,0 +1,54 @@
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+expandable-card {
+
+    display: block;
+    background-color: #202020;
+    padding: 4px; margin: 4px 0px;
+    border: 1px solid #686868;
+    border-radius: 4px;
+    margin-bottom: 14px;
+
+    .exp-control {
+        display: none;
+    }
+
+    .exp-control:checked ~ .exp-label:after {
+        content: '\00D7';
+    }
+    
+    .exp-control:checked + .exp-label ~ .exp-content {
+        display: block;
+        margin-top: 14px;
+    }
+    
+
+    .exp-label {
+        display: flex; justify-content: space-between; align-items: center;
+        cursor: pointer;
+        h2 {
+            display: block;
+            width: 90%;
+            font-size: 1.4rem !important;
+        }
+    }
+    .exp-label:after {
+        content: '\22EE ';
+        font-size: 1.8rem;
+    }
+
+    .exp-content {
+        display: none;
+    }
+
+}
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+@media only screen and (min-width: 768px) {
+
+}
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */

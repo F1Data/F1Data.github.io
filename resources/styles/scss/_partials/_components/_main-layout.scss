@@ -1,0 +1,200 @@
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+@use '../_helpers/basics';
+@use '../_helpers/loader';
+/* -------------------------------------------------------------------------- */
+@mixin f1Data-logo($fontsize, $height) {
+    display: block;
+    color: #fff;
+    font-size: $fontsize;
+    line-height: $height;
+    span {
+        color: #ff4500;
+        font-size: inherit;
+    }
+}
+/* -------------------------------------------------------------------------- */
+html { height: 100vh;}
+body { height: 100%;}
+/* -------------------------------------------------------------------------- */
+.nav-button {
+    font-size: 2.2rem;
+    line-height: 5rem;
+}
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+main-layout {
+    display: block;
+    position: relative;
+    min-height: 100%; 
+    background-color: #202020;
+}
+main-layout.nav-is-open {
+    .main-nav {
+        left: 0px;
+    }
+}
+/* -------------------------------------------------------------------------- */
+
+.main-header {
+    display: flex; justify-content: space-between; align-items: flex-start; align-content: center;
+    background-image: url('../../images/misc/july1966_reims_gp.png');
+    background-position: bottom;
+    background-size: cover;
+    padding: 0px 6px;
+    transition: padding 250ms;
+   .header-logo {
+        @include f1Data-logo(4rem, 5rem);
+   }
+}
+
+.main-header.shrink {
+    padding-bottom: 20px;
+}
+/* -------------------------------------------------------------------------- */
+.main-nav {
+    display: flex; justify-content: space-between; align-items: flex-start; align-content: flex-start; flex-wrap: wrap;
+    position: absolute; top: 0px; left: 0px;
+    height: 100vh; width: 100%; left: -100%;
+    background-color: #202020;
+    padding: 0px 6px;
+    overflow-x: hidden;
+    z-index: 999;
+    transition: 250ms ease;
+    .nav-logo {
+        position: sticky; top: 0px;
+        @include f1Data-logo(4rem, 5rem);
+       }    
+    .nav-button {
+        font-size: 2.2rem;
+    }
+    .nav-button-open {
+        float: right;
+    }
+    .nav-button-close {
+        float: right;
+    }
+    .nav-menu {
+        flex: 0 0 100%;
+        display: block; width: 100%;
+        padding: 10px 6px;
+        ul {
+            li {
+                padding-bottom: 18px;
+                a {
+                    font-size: 1.4rem;
+                    line-height: 2rem;
+                }
+                a.has-subitems:after {
+                    content: ' \25FF';
+                    font-size: 60%;
+                  }
+                a.is-current-page:after {
+                    content: ' \2022';
+                    color:#fa4500;
+                }                   
+                a + ul {
+                    li {
+                        padding-bottom: 10px;
+                        a {
+                            font-size: 1.2rem;
+                            line-height: 1.6rem;
+                            padding-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* -------------------------------------------------------------------------- */
+.main-content {
+    display: block;
+    min-height: 100%; 
+    padding: 4px 4px 20px 4px;
+}
+/* -------------------------------------------------------------------------- */
+.main-footer {
+    position: absolute; bottom: 0px;
+    display: flex; justify-content: space-between; align-items: center;
+    height: 1.8rem; width: 100%;
+    background-color: #000;
+    padding: 0px 6px;
+    span, a {
+        font-size: 0.8rem;
+    }
+}
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+@media only screen and (min-width: 768px) {
+    .nav-button {
+        display: none;
+    }
+    .nav-logo {
+        display: none !important;
+    }
+    main-layout {
+        max-width: 1100px; width: auto;
+        margin: 0px auto;
+    }
+
+    .main-header {
+        height: 140px !important;
+    }
+
+    .main-nav {
+        position: relative;
+        height: 2rem; left: unset;
+        background-color: brown;
+        overflow: visible;
+        .nav-menu {
+            padding: 0px 6px;
+            li {
+                float: left;
+                padding: 0px !important;
+                a {
+                    display: block;
+                    height: 100%;
+                    padding: 0px 1rem;
+                }
+                a + ul {
+                    position: absolute;
+                    height: 0px;
+                    padding: 0px;
+                    overflow: hidden;
+                    background-color:#000;
+                    border-radius: 0px 0px 6px 6px;
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+                    li {
+                        float: none;
+                        a {
+                            display: block;
+                            font-size: 0.8em;
+                            line-height: 2rem !important;
+                        }
+                    }
+                }
+                a:focus {
+                    background-color: #585858;
+                }
+                a:focus + ul {
+                    height: 200px;
+                    padding: 10px 6px;
+                    background-color: #585858;
+                }
+            }
+            li:nth-of-type(3) a:focus + ul {
+                height: 130px;
+            }
+            li:nth-of-type(4) a:focus + ul {
+                height: 100px;
+            }
+        }
+    }
+}
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */

@@ -1,0 +1,55 @@
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+* { 
+    box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px; color: #f0f0f0; 
+}
+
+*, *::before, *::after { 
+    box-sizing: border-box; 
+}
+/* -------------------------------------------------------------------------- */
+html {
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 14px; font-style: normal; font-variant: normal; font-weight: 300; 
+    line-height: 1.2rem;
+    background-color: #606060;
+    -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;
+    @media only screen and (min-width: 768px) {
+        font-size: 16px;
+    }    
+}
+
+/* -------------------------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+
+h1 {font-size: 1.6rem; line-height: 1.8em; }
+h2 {font-size: 1.5rem; line-height: 1.7em; }
+h3 {font-size: 1.4rem; line-height: 1.6em; }
+h4 {font-size: 1.3rem; line-height: 1.5em; }
+h5 {font-size: 1.2rem; line-height: 1.4em; }
+h6 {font-size: 1.1rem; line-height: 1.3em; }
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h small6 { font-size: 80%; }
+/* -------------------------------------------------------------------------- */
+img { border: none; }
+/* -------------------------------------------------------------------------- */
+a { 
+    color: #fff;
+    text-decoration: none !important; 
+    cursor: pointer !important; 
+}
+
+ul {
+    list-style: none;
+}
+/* -------------------------------------------------------------------------- */
+input, button, label, select, textarea  { font-size: 1rem; }
+
+button {
+    cursor: pointer;
+}
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */

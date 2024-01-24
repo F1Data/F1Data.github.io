@@ -1,0 +1,178 @@
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+.table {
+
+}
+
+.table-title {
+
+}
+
+.table-header {
+    display: none;
+}
+
+.table-body {
+    display: flex; flex-direction: column; gap: 6px;
+
+}
+
+.table-row {
+    margin: 4px 0px;
+}
+
+.table-row.position-row {
+    display: flex; 
+    .row-position {
+        flex: 0 0 40px;
+        display: flex; justify-content: center; align-items: center;
+        background-color: #606060;
+        padding: 0px 10px;
+        border-radius: 4px 0px 0px 4px;
+        border: 1 px solid #e0e0e0;
+        span {
+            font-size: 1.4rem;
+        }
+    }
+    .row-content {
+        flex: 1;
+        padding: 4px;
+        border-radius: 0px 4px 4px 0px;
+        border: 1px solid #000;
+        background-color: #404040;
+        border-left: 0px;
+    }
+
+}
+
+.table .link-1 {
+    font-size: 1.1rem;
+    color: #fff;
+    text-decoration: underline !important;
+    text-decoration-thickness: 1px;
+}
+.table .link-2 {
+    font-size: 0.9rem;
+    text-decoration: underline !important;
+    text-decoration-thickness: 1px;
+}
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+
+.flag-box  {
+    grid-area: flagbox;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    width: 24px;
+    img {
+        width: 100%;
+    }
+    span {
+        text-align: center;
+        font-size: 0.6rem;
+        width: 100%;
+    }
+}
+
+.driver-name {
+    grid-area: drvname;
+    span {
+        font-size: 0.7em;
+        color: #aed6f1;
+    }
+}
+
+.constructor-name {
+    grid-area: cntrname;
+}
+
+.points {
+    grid-area: points;
+    font-size: 0.8rem;
+}
+.points:before {
+    content: 'Puntos ';
+    display: block;
+}
+
+.wins {
+    grid-area: wins;
+    font-size: 0.8rem;
+}
+.wins:before {
+    content: 'Victorias ';
+    display: block;
+}
+
+.race-time {
+    grid-area: racetime;
+    font-size: 0.8rem;
+    cursor: pointer !important;
+}
+.race-time:before {
+    content: 'Tiempo ';
+    display: block;
+    cursor: pointer !important;
+}
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+@media only screen and (min-width: 768px) {
+    .table-header {
+        display: block;
+    }
+
+    .table-row:hover {
+        background-color: #383838;
+    }
+
+    .table-row.position-row {
+        display: flex; 
+        .row-position {
+            flex: 0 0 40px;
+            height: 40px; width: 40px;
+            display: flex; justify-content: center; align-items: center;
+            background-color: #606060;
+            padding: 0px 0px;
+            margin: 4px;
+            border-radius: 50% 50%;
+            span {
+                font-size: 1.4rem;
+            }
+        }
+        .row-content {
+            flex: 1;
+            align-items: center;
+            border-radius: 4px !important;
+            border: none;
+        }
+    
+    }    
+
+    .driver-name {
+        font-size: 1rem;
+    }
+
+    .points {
+        font-size: 1rem;
+    }
+    .points:before {
+        content: ''
+    }
+    .race-time {
+        font-size: 1rem;
+    }
+    .race-time:before {
+        content: '';
+    }
+    .wins {
+        font-size: 1rem;
+    }    
+    .wins:before {
+        content: '';
+    }
+}
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */

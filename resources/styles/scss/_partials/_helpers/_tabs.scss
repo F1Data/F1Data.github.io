@@ -1,0 +1,39 @@
+.tab-set {
+
+    .tab-control {
+      display: none;
+    }
+  
+    .tab-label {
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 5px 5px 0px 5px;
+      outline: 0px;
+      border: 1px solid transparent;
+      border-bottom: 0px solid #202020;
+      cursor: pointer;
+    }
+  
+    .tab-panel {
+      display: none;
+      padding: 30px 0;
+      border-top: 1px solid #686868;
+      margin-top: 1px;
+    }
+  
+    .tab-control:first-of-type:checked ~ .tab-label:first-of-type, 
+    .tab-control:nth-of-type(2):checked ~ .tab-label:nth-of-type(2) {
+      border: 1px solid #686868;
+      border-bottom: 3px solid #202020;
+      border-radius: 3px 3px 0px 0px;
+    } 
+    .tab-control:first-of-type:checked ~ .tab-panel:first-of-type, 
+    .tab-control:nth-of-type(2):checked ~ .tab-panel:nth-of-type(2), 
+    .tab-control:nth-of-type(3):checked ~ .tab-panel:nth-of-type(3),
+    .tab-control:nth-of-type(4):checked ~ .tab-panel:nth-of-type(4),
+    .tab-control:nth-of-type(5):checked ~ .tab-panel:nth-of-type(5),
+    .tab-control:nth-of-type(6):checked ~ .tab-panel:nth-of-type(6) { 
+      display: block;
+    }
+  
+  }

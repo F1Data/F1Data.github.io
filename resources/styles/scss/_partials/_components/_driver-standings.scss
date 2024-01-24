@@ -1,0 +1,41 @@
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+@use '../_helpers/table';
+/* -------------------------------------------------------------------------- */
+driver-standings {
+    display: block;
+    .table {
+        .row-content {
+            display: grid;
+            gap: 4px;
+            grid-template-rows: 1rem;
+            grid-template-columns: 28px calc(50% - 36px) 25% 25%; 
+            grid-template-areas: 'flagbox drvname  drvname  drvname'
+                                 'flagbox cntrname cntrname cntrname'
+                                 'filler  points   wins     wins';
+        }
+        .points:before { display: unset; }
+        .wins:before { display: unset; }
+    }
+}
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+@media only screen and (min-width: 768px) {
+    driver-standings {
+        display: block;
+        .table {
+            .row-content {
+                display: grid;
+                gap: 4px;
+                grid-template-rows: auto;
+                grid-template-columns: 28px calc(30% - 22px) calc(30% - 22px) 25% 25%; 
+                grid-template-areas: 'flagbox drvname cntrname points wins';
+            }
+        }
+    }
+}
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */

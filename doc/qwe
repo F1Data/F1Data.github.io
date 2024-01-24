@@ -1,0 +1,227 @@
+    .main-header {
+        display: flex; justify-content: space-between; align-items: center;
+        background-image: url(../../images/misc/july1966_reims_gp.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        .main-logo {
+            a {
+                font-family: 'Courier New', sans-serif;
+                font-size: 10vw;
+                color: var(--cb1) !important;
+                span {
+                    font-size: 7vw;
+                    color: #ff4500;
+                }
+            }
+        }
+    }
+
+    /* -------------------------------------------------------------------------- */
+* { box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px; color: #000; }
+*, *::before, *::after { box-sizing: border-box; }
+/* -------------------------------------------------------------------------- */
+html {
+    height: 100vh; width: 100vw;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 14px; font-style: normal; font-variant: normal; font-weight: 300; 
+    line-height: 1.2rem;
+    -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;
+    @media only screen and (min-width: 768px) {
+        font-size: 16px;
+    }    
+}
+
+body {
+    height: 100%; 
+}
+/* -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+
+h1 {font-size: 1.6rem; line-height: 1.8em; }
+h2 {font-size: 1.5rem; line-height: 1.7em; }
+h3 {font-size: 1.4rem; line-height: 1.6em; }
+h4 {font-size: 1.3rem; line-height: 1.5em; }
+h5 {font-size: 1.2rem; line-height: 1.4em; }
+h6 {font-size: 1.1rem; line-height: 1.3em; }
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h small6 { font-size: 80%; }
+/* -------------------------------------------------------------------------- */
+img { border: none; }
+/* -------------------------------------------------------------------------- */
+a { 
+    color: #1b4f72;
+    text-decoration: none !important; 
+    cursor: pointer !important; 
+}
+
+ul {
+    list-style: none;
+}
+/* -------------------------------------------------------------------------- */
+input, button, label, select, textarea  { font-size: 1rem; }
+
+button {
+    cursor: pointer;
+}
+/* -------------------------------------------------------------------------- */
+
+
+
+
+/* -------------------------------------------------------------------------- */
+@use '../_helpers/basics';
+/* -------------------------------------------------------------------------- */
+main-layout {
+    display: block;
+    position: relative;
+    min-height: 100%;
+    background-color:red;
+}
+/* -------------------------------------------------------------------------- */
+.main-header {
+    display: flex; justify-content: flex-start; align-content:flex-start; align-items: center;
+    height: 200px;
+    background-image: url(../../images/misc/july1966_reims_gp.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    padding: 6px;
+    .header-logo {
+        font-size: 100px;
+        color: #fff;
+        span {
+            font-size: 100px;
+            color: #ff4500;
+        }
+    }
+}
+/* -------------------------------------------------------------------------- */
+.main-nav {
+    display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; align-content: center;
+    position: sticky; top: 0px;
+    background-color:#111214;
+    padding: 6px;
+    .nav-logo {
+        flex: 1 0 10%;
+        font-size: 1.4rem;
+        color: #fff;
+        span {
+            font-size: 1.4rem;
+            color: #ff4500;
+        }
+    }
+    .nav-buttons-box {
+        flex: 1 0 80%;
+        text-align: right;
+        .nav-button {
+            color: #fff;
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+        }
+        .nav-button-close {
+            display: none;
+        }
+    }
+    .nav-menu {
+        flex: 1 0 100%;
+        display: block;
+        height: 0px;
+        transition: 250ms ease;
+        overflow: hidden;
+    }
+}
+main-layout.nav-is-open {
+    .nav-button-open {
+        display: none;
+    }
+    .nav-button-close {
+        display: block !important;
+    }
+    .nav-menu {
+        height: 400px;
+    }
+}
+/* -------------------------------------------------------------------------- */
+.main-content {
+    background-color:chartreuse;
+}
+/* -------------------------------------------------------------------------- */
+.main-footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    background-color: #000;
+}
+/* -------------------------------------------------------------------------- */
+@media only screen and (min-width: 768px) {
+    main-layout {
+        max-width: 1100px;
+        margin: 0px auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+display: flex; justify-content: space-between; flex-wrap: nowrap; align-items: center;
+height: 2rem;
+padding: 0px;
+.nav-logo {
+    flex: 0 0 10%;
+}
+.nav-buttons-box {
+    display: none;
+}
+.nav-menu {
+    flex: 0 0 80% !important;
+    overflow: visible;
+    ul {
+        display: flex; justify-content: space-between; align-items: center; align-content: flex-end;
+        height: 100%;
+        li {
+            float: left;
+            a {
+                display: block;
+                height: 2rem;
+                padding: 0px 4px;
+            }
+            a + ul {
+                display: block;
+                position: absolute;
+                height: 0px;
+                padding: 0px;
+                overflow: hidden;
+                transition: 150ms ease;
+                background-color: #000;
+
+                li {
+                    float: none !important;
+                    a {
+                        font-size: 98%;
+                        line-height: 1.4rem;
+                    }
+                }
+            }
+            a:focus {
+                background-color: #000;
+            }
+            a:focus + ul {
+                height: 100px;
+                padding: 4px 6px;
+            }
+        }
+    }
+}

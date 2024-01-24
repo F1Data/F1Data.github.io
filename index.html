@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./resources/styles/css/index.css"></link>
+        <script type="module" src="./resources/scripts/components/main-layout.mjs"></script>
+        <script type="module" src="./resources/scripts/components/expandable-card.mjs"></script>
+        <script type="module" src="./resources/scripts/components/next-race.mjs"></script>
+        <script type="module" src="./resources/scripts/components/race-results.mjs"></script>
+        <script type="module" src="./resources/scripts/components/driver-standings.mjs"></script>
+        <script type="module" src="./resources/scripts/components/constructor-standings.mjs"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <main-layout>
+            <expandable-card id="ec1" header="Próxima carrera">
+                <next-race></next-race>
+            </expandable-card>
+            <expandable-card id="ec2" header="Ultima carrera">
+                <race-results mode="short"></race-results>
+            </expandable-card>
+            <expandable-card id="ec3" header="Campeonato" expanded>
+                <div class="tab-set">
+                    <input type="radio" class="tab-control" name="tab-control" id="tab-control-1" aria-controls="tab-drivers" checked>
+                    <input type="radio" class="tab-control" name="tab-control" id="tab-control-2" aria-controls="tab-constr">                    
+                    <label class="tab-label" for="tab-control-1">Pilotos</label>
+                    <label class="tab-label" for="tab-control-2">Constructores</label>
+                    <div id="tab-drivers" class="tab-panel">
+                        <driver-standings></driver-standings>
+                    </div>
+                    <div id="tab-constr" class="tab-panel">
+                        <constructor-standings></driver-standings>
+                    </div>
+                </div>
+            </expandable-card>
+        </main-layout>
+    </body>
+</html>

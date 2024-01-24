@@ -1,0 +1,31 @@
+<mxfile host="app.diagrams.net" modified="2023-12-11T15:24:24.298Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="qLcPEnRyQsIIVD-Probr" version="22.1.7" type="device">
+  <diagram name="Page-1" id="03018318-947c-dd8e-b7a3-06fadd420f32">
+    <mxGraphModel dx="2206" dy="1166" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="IGwLIRzsWoITpGifk3e0-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a19;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="40" y="50" width="1920" height="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="IGwLIRzsWoITpGifk3e0-5" value="F" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Tahoma;fontSize=220;fontColor=#fcf7f7;" vertex="1" parent="1">
+          <mxGeometry x="70" y="90" width="120" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="IGwLIRzsWoITpGifk3e0-6" value="Data" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Tahoma;fontSize=220;fontColor=#fcf7f7;" vertex="1" parent="1">
+          <mxGeometry x="194" y="90" width="460" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="IGwLIRzsWoITpGifk3e0-7" value="l" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Tahoma;fontSize=215;fontColor=#CC0000;" vertex="1" parent="1">
+          <mxGeometry x="170" y="96" width="50" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="IGwLIRzsWoITpGifk3e0-8" value="La fórmula uno en números desde 1950 hasta hoy" style="text;strokeColor=none;fillColor=none;html=1;fontSize=31;fontStyle=1;verticalAlign=middle;align=left;fontColor=#f7f3f3;" vertex="1" parent="1">
+          <mxGeometry x="90" y="340" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="IGwLIRzsWoITpGifk3e0-12" value="" style="line;strokeWidth=4;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;fontColor=#f7f3f3;" vertex="1" parent="1">
+          <mxGeometry x="90" y="310" width="1820" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="IGwLIRzsWoITpGifk3e0-14" value="Temporada 2023" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=30;fontColor=#f7f3f3;" vertex="1" parent="1">
+          <mxGeometry x="80" y="430" width="730" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

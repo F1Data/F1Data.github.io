@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./resources/styles/css/driverSeasonRaces.css"></link>
+        <script type="module" src="./resources/scripts/components/main-layout.mjs"></script>
+        <script type="module" src="./resources/scripts/components/driver-season-races.mjs"></script>
+        <title>Document</title>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+    
+                const queryString = window.location.search;
+    
+                const urlParams = new URLSearchParams(queryString);
+    
+                const season = urlParams.get('season');
+                const driverId = urlParams.get('driverId');
+                const driverName = urlParams.get('driverName');
+    
+                let dsr = document.querySelector('driver-season-races');
+    
+                dsr.setAttribute('season', season);
+                dsr.setAttribute('driverId', driverId);
+                dsr.setAttribute('driverName', driverName);
+    
+                dsr.render();
+    
+                dsr.addEventListener('load', e => {
+                    document.getElementById('pageTitle').innerHTML = 'Temporada ' + dsr.season;
+                });
+    
+                if (dsr) {
+                    document.getElementById('pageTitle').innerHTML = 'Temporada ' + dsr.season;
+                }
+    
+                document.getElementById('pageSubtitle').innerText = driverName;            
+    
+            });
+        </script>         
+    </head>
+    <body>
+        <main-layout>
+            <driver-season-races></driver-season-races>
+        </main-layout>
+    </body>
+</html>
