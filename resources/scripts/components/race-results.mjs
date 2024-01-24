@@ -24,7 +24,6 @@ class RaceResults extends HTMLElement {
         this.innerHTML = createLoader();
 
         this.render();
-        
     }
     //--------------------------------------------------------------------------
     render() {
