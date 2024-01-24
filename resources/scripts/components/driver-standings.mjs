@@ -19,7 +19,7 @@ class DriverStandings extends HTMLElement {
 
         this.innerHTML = createLoader();
 
-        //this.render();
+        this.render();
 
     }
     //--------------------------------------------------------------------------
