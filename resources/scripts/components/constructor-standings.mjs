@@ -19,7 +19,7 @@ class ConstructorStandings extends HTMLElement {
 
         this.innerHTML = createLoader();
 
-        //this.render();
+        this.render();
 
     }
     //--------------------------------------------------------------------------
